@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Select a Personality!</h1>
+    {{message}}
+    {{#personality}}
+        <form action="/personality/:personality" method="GET">
+            <input type="submit" name="name" value="{{name}}">
+        </form>
+        <h1>{{name}}</h1>
+        <p>{{title}}</p>
+        <p>{{location}}</p>
+        <p>{{bio}}</p>
+    {{/personality}}
+</body>
+</html>
