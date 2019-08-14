@@ -1,0 +1,16 @@
+{
+  "name": "broken-calculator",
+  "version": "1.0.0",
+  "description": "A Calculator with Personalities",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Bankston, Taliaa Tauatolo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "sequelize": "^5.15.0"
+  }
+}
