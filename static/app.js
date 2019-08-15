@@ -26,28 +26,21 @@ function reverseNumberFormat(num) {
   return Number(num.replace(/,/g, ""));
 }
 
-// add this as a method to the Personality class
-// function playCharacter() {
-function playCharacter(character) {
-  const audio = document.querySelector(`audio.${character}`);
-  console.log(audio);
-  audio.play();
-}
-
 // user selects a character
 // the calc page loads and the character greets the user
 window.addEventListener("load", playCharacterGreeting);
 
-function playCharacter() {
-  const audio = document.querySelector(`audio.mike`);
-  console.log(audio);
-  audio.play();
+// // MAKING STEVE'S GREETING
+async function playCharacterGreeting() {
+  const audio = document.querySelectorAll(`audio.steve-intro`);
+  let randomAudio = audio[Math.floor(audio.length * Math.random())];
+  await randomAudio.play();
 }
+const audio = document.querySelectorAll("audio.steve-equals");
+let randomAudio = audio[Math.floor(audio.length * Math.random())];
 
-function playCharacterGreeting() {
-  const audio = document.querySelector(`audio.jim`);
-  console.log(audio);
-  audio.play();
+async function playEqualsAudio() {
+  await randomAudio.play();
 }
 
 // OPERATOR CALC
@@ -79,11 +72,6 @@ for (let i = 0; i < operator.length; i++) {
         if (this.id == "=") {
           //FIND THE CALCULATION
 
-          // play MP3 of character find the calculation
-          playCharacter();
-          //   const audio = document.querySelector("audio");
-          //   audio.play();
-
           // Generate random operator
           let operator = ["+", "-", "/", "*"];
           let randomOperator =
@@ -105,9 +93,13 @@ for (let i = 0; i < operator.length; i++) {
           printOutput("");
 
           // do an await for the mp3 duration instead of setTimeout
+          randomAudio = audio[Math.floor(audio.length * Math.random())];
+
+          playEqualsAudio();
+          let duration = randomAudio.duration;
           setTimeout(() => {
             printOutput(newEquation);
-          }, 5000);
+          }, duration * 1000);
         } else {
           history = history + this.id;
           printHistory(history);
