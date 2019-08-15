@@ -8,7 +8,6 @@ const models = require('./models')
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.static('static'))
-app.use(express.static('js'))
 
 const VIEWS_PATH = path.join(__dirname, '/views')
 
@@ -22,6 +21,8 @@ app.get('/', (req, res) => {
         .then((personality) => {
             console.log(personality)
             res.render('personality', {personality: personality})
+        }).catch(error => {
+            console.log(error)
         })
 })
 

@@ -6,16 +6,22 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Select a Personality!</h1>
-    {{message}}
-    {{#personality}}
-        <form action="/personality/:personality" method="GET">
-            <input type="submit" name="name" value="{{name}}">
-        </form>
-        <h1>{{name}}</h1>
-        <p>{{title}}</p>
-        <p>{{location}}</p>
-        <p>{{bio}}</p>
-    {{/personality}}
+    <div id="header">
+        <h1 id="personality-selection-heading">Select a Personality!</h1>
+        <p id="error-message">{{message}}</p>
+    </div>
+    <div id="personality-container">
+        {{#personality}}
+            <div class=personality>
+                <form action="/personality/:personality" method="GET">
+                    <input type="submit" name="name" class="personality-button" value="{{name}}">
+                </form>
+                <h3 class="personality-name">Name: {{name}}</h1>
+                <p class="personality-title">Title: {{title}}</p>
+                <p class="personality-location">Location: {{location}}</p>
+                <p class="personality-bio">{{bio}}</p>
+            </div>
+        {{/personality}}
+    </div>
 </body>
 </html>

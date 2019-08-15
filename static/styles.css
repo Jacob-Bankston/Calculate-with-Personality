@@ -1,0 +1,20 @@
+#header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 24px;
+    padding: 24px;
+}
+
+#personality-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.personality {
+    display: flex;
+
+}
