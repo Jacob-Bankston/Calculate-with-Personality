@@ -16,11 +16,12 @@
       href="https://fonts.googleapis.com/css?family=Nosifer&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="w3.css" />
     <link rel="stylesheet" href="main.css" />
     <title>Useless Calculator</title>
   </head>
   <body>
+    <div id="main-area">
     <header>
       <div class="container">
         <div class="avatar">
@@ -38,50 +39,68 @@
         The Most Useless, But Entertaining Calculator You'll Ever Use!
       </h4>
     </header>
-
-    <div id="container">
-      <div id="calculator">
-        <div id="result">
-          <div id="history">
-            <p id="history-value"></p>
+      <div id="container">
+        <div id="calculator">
+          <div id="result">
+            <div id="history">
+              <p id="history-value"></p>
+            </div>
+            <div id="output">
+              <p id="output-value"></p>
+            </div>
           </div>
-          <div id="output">
-            <p id="output-value"></p>
+          <div id="keyboard">
+            <button class="top operator" id="clear">C</button>
+            <button class="top operator" id="backspace">CE</button>
+            <button class="top operator" id="%">%</button>
+            <button class="side operator" id="/">&#247;</button>
+            <button class="number" id="7">7</button>
+            <button class="number" id="8">8</button>
+            <button class="number" id="9">9</button>
+            <button class="side operator" id="*">&times;</button>
+            <button class="number" id="4">4</button>
+            <button class="number" id="5">5</button>
+            <button class="number" id="6">6</button>
+            <button class="side operator" id="-">-</button>
+            <button class="number" id="1">1</button>
+            <button class="number" id="2">2</button>
+            <button class="number" id="3">3</button>
+            <button class="side operator" id="+">+</button>
+            <button class="empty" id="empty"></button>
+            <button class="number" id="0">0</button>
+            <button class="empty" id="empty"></button>
+            <button class="side operator" id="=">=</button>
           </div>
         </div>
-        <div id="keyboard">
-          <button class="top operator" id="clear">C</button>
-          <button class="top operator" id="backspace">CE</button>
-          <button class="top operator" id="%">%</button>
-          <button class="side operator" id="/">&#247;</button>
-          <button class="number" id="7">7</button>
-          <button class="number" id="8">8</button>
-          <button class="number" id="9">9</button>
-          <button class="side operator" id="*">&times;</button>
-          <button class="number" id="4">4</button>
-          <button class="number" id="5">5</button>
-          <button class="number" id="6">6</button>
-          <button class="side operator" id="-">-</button>
-          <button class="number" id="1">1</button>
-          <button class="number" id="2">2</button>
-          <button class="number" id="3">3</button>
-          <button class="side operator" id="+">+</button>
-          <button class="empty" id="empty"></button>
-          <button class="number" id="0">0</button>
-          <button class="empty" id="empty"></button>
-          <button class="side operator" id="=">=</button>
+      </div>
+      <audio class="mike" data-key="65" src="sounds/mike/clap.wav"></audio>
+      <audio class="jim" data-key="83" src="sounds/mike/hihat.wav"></audio>
+      <audio data-key="68" src="sounds/mike/kick.wav"></audio>
+      <audio data-key="70" src="sounds/mike/openhat.wav"></audio>
+      <audio data-key="71" src="sounds/mike/boom.wav"></audio>
+      <audio data-key="72" src="sounds/mike/ride.wav"></audio>
+      <audio data-key="74" src="sounds/mike/snare.wav"></audio>
+      <audio data-key="75" src="sounds/mike/tom.wav"></audio>
+      <audio data-key="76" src="sounds/mike/tink.wav"></audio>
+      <button class="md-trigger" data-modal="modal-16">Blur</button>
+    </div>
+    <div id="review-container">
+      <div id="review-card" class="md-modal md-effect-16">
+        <div id="review-area" class="md-content">
+          <h3>Was {{personality}} correct?</h3>
+          <div id="buttons-for-review">
+            <button id="yes-play-audio" class="md-close">Yes</button>
+            <button id="no-play-audio" class="md-close">No</button>
+          </div>
         </div>
       </div>
     </div>
-    <audio class="mike" data-key="65" src="sounds/mike/clap.wav"></audio>
-    <audio class="jim" data-key="83" src="sounds/mike/hihat.wav"></audio>
-    <audio data-key="68" src="sounds/mike/kick.wav"></audio>
-    <audio data-key="70" src="sounds/mike/openhat.wav"></audio>
-    <audio data-key="71" src="sounds/mike/boom.wav"></audio>
-    <audio data-key="72" src="sounds/mike/ride.wav"></audio>
-    <audio data-key="74" src="sounds/mike/snare.wav"></audio>
-    <audio data-key="75" src="sounds/mike/tom.wav"></audio>
-    <audio data-key="76" src="sounds/mike/tink.wav"></audio>
+    <div class="md-overlay"></div>
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+		<script>var polyfilter_scriptpath = '/js/';</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
