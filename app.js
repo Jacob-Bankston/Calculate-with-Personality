@@ -68,23 +68,16 @@ app.listen(PORT, () => {
 // }).then((personality) => console.log(personality))
 
 // let personality = models.Personality.build({
-<<<<<<< HEAD
 //     name: 'Gregory Roberts',
 //     title: 'CFO',
 //     location: 'London, UK',
 //     bio: ''
-=======
 //     name: 'Mike Michaels',
 //     title: 'Manager',
 //     location: 'Miami, FL',
 //     bio: 'Professional Weight Lifter that is brushing up on Math for his GRE. Happy to be recently promoted to the position of Manager in the Useless Calculator Company!'
->>>>>>> master
 // })
 
 // personality.save().then((newPersonality) => {
 //     console.log(newPersonality)
-<<<<<<< HEAD
 // })
-=======
-// })
->>>>>>> master
