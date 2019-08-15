@@ -64,13 +64,13 @@ app.listen(PORT, () => {
 //     }
 // }).then((personality) => console.log(personality))
 
-// let personality = models.Personality.build({
-//     name: 'Steve',
-//     title: 'Group Lead',
-//     location: 'Dallas, TX',
-//     bio: 'Why do I have to write a bio.'
-// })
+let personality = models.Personality.build({
+    name: 'Gregory Roberts',
+    title: 'CFO',
+    location: 'London, UK',
+    bio: ''
+})
 
-// personality.save().then((newPersonality) => {
-//     console.log(newPersonality)
-// })
+personality.save().then((newPersonality) => {
+    console.log(newPersonality)
+})
