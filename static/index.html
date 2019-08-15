@@ -22,23 +22,23 @@
   </head>
   <body>
     <div id="main-area">
-    <header>
-      <div class="container">
-        <div class="avatar">
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png"
-            alt="Skytsunami"
-          />
+      <header>
+        <div class="container">
+          <div class="avatar">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png"
+              alt="Skytsunami"
+            />
+          </div>
         </div>
-      </div>
-      <h1 class="page-title">
-        The Useless<br />
-        Calculator
-      </h1>
-      <h4>
-        The Most Useless, But Entertaining Calculator You'll Ever Use!
-      </h4>
-    </header>
+        <h1 class="page-title">
+          The Useless<br />
+          Calculator
+        </h1>
+        <h4>
+          The Most Useless, But Entertaining Calculator You'll Ever Use!
+        </h4>
+      </header>
       <div id="container">
         <div id="calculator">
           <div id="result">
@@ -78,7 +78,7 @@
     <div id="review-container">
       <div id="review-card" class="md-modal md-effect-16">
         <div id="review-area" class="md-content">
-          <h3>Was {{personality}} correct?</h3>
+          <h3>Was {{ personality }} correct?</h3>
           <div id="buttons-for-review">
             <button id="yes-play-audio" class="md-close">Yes</button>
             <button id="no-play-audio" class="md-close">No</button>
@@ -88,61 +88,65 @@
     </div>
     <div class="md-overlay"></div>
     <audio
-    class="steve-intro"
-    src="/sounds/Steve/1-intro/steve-intro-1.wav"
+      class="steve-intro"
+      src="/sounds/Steve/1-intro/steve-intro-1.wav"
     ></audio>
     <audio
-    class="steve-intro"
-    src="/sounds/Steve/1-intro/steve-intro-2.wav"
+      class="steve-intro"
+      src="/sounds/Steve/1-intro/steve-intro-2.wav"
     ></audio>
     <audio
-    class="steve-intro"
-    src="/sounds/Steve/1-intro/steve-intro-3.wav"
+      class="steve-intro"
+      src="/sounds/Steve/1-intro/steve-intro-3.wav"
     ></audio>
     <audio
-    class="steve-intro"
-    src="/sounds/Steve/1-intro/steve-intro-4.wav"
+      class="steve-intro"
+      src="/sounds/Steve/1-intro/steve-intro-4.wav"
     ></audio>
-    
+
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-1.wav"
-    ></audio>
-    <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-2.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-1.wav"
     ></audio>
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-3.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-2.wav"
     ></audio>
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-4.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-3.wav"
     ></audio>
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-5.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-4.wav"
     ></audio>
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-6.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-5.wav"
     ></audio>
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-7.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-6.wav"
     ></audio>
     <audio
-    class="steve-equals"
-    src="/sounds/Steve/2-equals/steve-equals-8.wav"
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-7.wav"
     ></audio>
-    
-    <script src="classie.js"></script>
-    <script src="modalEffects.js"></script>
-    <script>var polyfilter_scriptpath = '/js/';</script>
-    <script src="cssParser.js"></script>
-    <script src="css-filters-polyfill.js"></script>
+    <audio
+      class="steve-equals"
+      src="/sounds/Steve/2-equals/steve-equals-8.wav"
+    ></audio>
+
+    // MODAL JS FILES
+    <script src="js/classie.js"></script>
+    <script src="js/modalEffects.js"></script>
+    <script>
+      var polyfilter_scriptpath = "/js/";
+    </script>
+    <script src="js/cssParser.js"></script>
+    <script src="js/css-filters-polyfill.js"></script>
+
+    //
     <script src="app.js"></script>
   </body>
-  </html>
-  
+</html>
