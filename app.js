@@ -51,33 +51,3 @@ app.get("/personality/:personality", (req, res) => {
 app.listen(PORT, () => {
   console.log("Server is running...");
 });
-
-// models.Personality.findAll()
-//     .then((personalities) => console.log(personalities))
-
-// models.Personality.findAll({
-//     where: {
-//         id: 3
-//     }
-// }).then((personality) => console.log(personality))
-
-// models.Personality.findOne({
-//     where: {
-//         name: "Steve"
-//     }
-// }).then((personality) => console.log(personality))
-
-// let personality = models.Personality.build({
-//     name: 'Gregory Roberts',
-//     title: 'CFO',
-//     location: 'London, UK',
-//     bio: ''
-//     name: 'Mike Michaels',
-//     title: 'Manager',
-//     location: 'Miami, FL',
-//     bio: 'Professional Weight Lifter that is brushing up on Math for his GRE. Happy to be recently promoted to the position of Manager in the Useless Calculator Company!'
-// })
-
-// personality.save().then((newPersonality) => {
-//     console.log(newPersonality)
-// })

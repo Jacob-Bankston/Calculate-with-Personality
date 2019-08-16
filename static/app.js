@@ -43,6 +43,9 @@ async function playEqualsAudio() {
   await randomAudio.play();
 }
 
+let feedbackModal = document.querySelector(".feedback-modal");
+feedbackModal.style.display = "none";
+
 // OPERATOR CALC
 let operator = document.getElementsByClassName("operator");
 for (let i = 0; i < operator.length; i++) {
@@ -100,6 +103,10 @@ for (let i = 0; i < operator.length; i++) {
           setTimeout(() => {
             printOutput(newEquation);
           }, duration * 1000);
+          // POPUP MODAL
+          setTimeout(() => {
+            feedbackModal.style.display = "block";
+          }, duration * 1000 + 1000);
         } else {
           history = history + this.id;
           printHistory(history);
@@ -120,6 +127,30 @@ for (let i = 0; i < number.length; i++) {
     }
   });
 }
+
+let yesFeedback = document.getElementById("yes");
+let noFeedback = document.getElementById("no");
+
+async function playYesResponse() {
+  const audio = document.querySelectorAll(`audio.steve-yes`);
+  let randomAudio = audio[Math.floor(audio.length * Math.random())];
+  await randomAudio.play();
+}
+
+async function playNoResponse() {
+  const audio = document.querySelectorAll(`audio.steve-no`);
+  let randomAudio = audio[Math.floor(audio.length * Math.random())];
+  await randomAudio.play();
+}
+
+yesFeedback.addEventListener("click", playYesResponse);
+noFeedback.addEventListener("click", playNoResponse);
+
+// noFeedback.addEventListener('click', playNoResponse) {
+//   //
+// }
+
+function showFeedbackModal() {}
 
 // Ask if character got the answer right, boolean
 /////// yes
