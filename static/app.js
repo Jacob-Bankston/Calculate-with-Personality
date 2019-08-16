@@ -32,11 +32,11 @@ window.addEventListener("load", playCharacterGreeting);
 
 // // MAKING STEVE'S GREETING
 async function playCharacterGreeting() {
-  const audio = document.querySelectorAll(`audio.steve-intro`);
+  const audio = document.querySelectorAll(`audio.audio-intro`);
   let randomAudio = audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
-const audio = document.querySelectorAll("audio.steve-equals");
+const audio = document.querySelectorAll("audio.audio-equals");
 let randomAudio = audio[Math.floor(audio.length * Math.random())];
 
 async function playEqualsAudio() {

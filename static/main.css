@@ -363,3 +363,18 @@ h4 {
 	transform: translateY(0);
 	opacity: 1;
 }
+
+#header {
+
+}
+
+.personality-list {
+  width: 500px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+
+.personality {
+  padding-bottom: 50px;
+}

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="w3.css">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <div id="header">
         <h1 id="personality-selection-heading">Select a Personality!</h1>
         <p id="error-message">{{message}}</p>
     </div>
-    <div id="personality-container">
+    <div class="personality-list">
+
         {{#personality}}
             <div class=personality>
-                <form action="/personality/:personality" method="GET">
-                    <input type="submit" name="name" class="personality-button" value="{{name}}">
+                <form action="/personality/{{name}}" method="GET">
+                    <input type="submit" class="personality-button" value="Choose Me!">
                 </form>
                 <h3 class="personality-name">Name: {{name}}</h1>
                 <p class="personality-title">Title: {{title}}</p>
                 <p class="personality-location">Location: {{location}}</p>
-                <p class="personality-bio">{{bio}}</p>
+                <p class="personality-bio">Bio: {{bio}}</p>
             </div>
         {{/personality}}
     </div>
