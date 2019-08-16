@@ -16,7 +16,6 @@
       href="https://fonts.googleapis.com/css?family=Nosifer&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="w3.css" />
     <link rel="stylesheet" href="main.css" />
     <title>Useless Calculator</title>
   </head>
@@ -75,6 +74,16 @@
       </div>
     </div>
 
+    <!-- FEEDBACK MODAL -->
+
+    <div class="feedback-modal">
+      <h2>Did Steve get it right?</h2>
+      <button id="yes">YES 😄</button>
+      <button id="no">NO ☹️</button>
+    </div>
+
+    <!-- AUDIO CONTENT -->
+
     <audio
       class="steve-intro"
       src="/sounds/Steve/1-intro/steve-intro-1.wav"
@@ -124,6 +133,13 @@
       class="steve-equals"
       src="/sounds/Steve/2-equals/steve-equals-8.wav"
     ></audio>
+
+    <audio class="steve-yes" src="/sounds/Steve/3-yes/steve-yes-1.wav"></audio>
+    <audio class="steve-yes" src="/sounds/Steve/3-yes/steve-yes-2.wav"></audio>
+    <audio class="steve-yes" src="/sounds/Steve/3-yes/steve-yes-3.wav"></audio>
+    <audio class="steve-no" src="/sounds/Steve/4-no/steve-no-1.wav"></audio>
+    <audio class="steve-no" src="/sounds/Steve/4-no/steve-no-2.wav"></audio>
+    <audio class="steve-no" src="/sounds/Steve/4-no/steve-no-3.wav"></audio>
 
     <script src="app.js"></script>
   </body>

@@ -146,7 +146,8 @@ button:nth-child(17) {
   border-bottom-left-radius: 5px;
 }
 
-h1 {
+/* HEADER */
+.page-title {
   font-family: "Bungee Inline", sans-serif;
   font-weight: 400;
   font-size: 3.5rem;
@@ -163,7 +164,7 @@ h1 {
   position: relative;
 }
 
-h1::before {
+.page-title::before {
   content: "";
   display: block;
   height: 100%;
@@ -257,109 +258,39 @@ h4 {
   text-align: center;
 }
 
-
-/* Adding style for sliding in and out modal container */
-
-/* #review-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+/* MODAL CSS */
+.feedback-modal {
+  height: 200px;
+  width: 450px;
+  position: absolute;
+  top: 400px;
+  background-color: rgba(73, 73, 73, 0.411);
+  left: 60px;
+  border-radius: 7px;
+  padding: 30px 50px;
+  box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
-#main-area {
-  display: flex;
-  align-items: center;
+.feedback-modal h2 {
+  text-align: center;
 }
 
-#review-card {
-  border-radius: 20px;
+.feedback-modal button {
+  padding: 20px;
+  width: 110px;
+  margin-left: 50px;
+  border-radius: 5px;
+  margin-top: 35px;
+  border: none;
+  box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 20px;
 }
 
-#review-area {
-  padding: 10px;
-} */
-
-/* Effect 16:  Blur */
-.md-modal {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 50%;
-	max-width: 630px;
-	min-width: 320px;
-	height: auto;
-	z-index: 2000;
-	visibility: hidden;
-	backface-visibility: hidden;
-	transform: translateX(-50%) translateY(-50%);
+#yes {
+  background-color: #67b26f;
 }
 
-.md-show {
-	visibility: visible;
-}
-
-.md-overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	visibility: hidden;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0;
-	transition: all 0.3s;
-}
-
-.md-show ~ .md-overlay {
-	opacity: 1;
-	visibility: visible;
-}
-
-.md-perspective,
-.md-perspective body {
-	height: 100%;
-	overflow: hidden;
-}
-
-.md-perspective body  {
-	background: #222;
-	perspective: 600px;
-}
-
-#main-area {
-	min-height: 100%;
-}
-
-.md-show.md-effect-16 ~ .md-overlay {
-	background: rgba(0,0,0,0.2);
-}
-
-.md-show.md-effect-16 ~ .container {
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	filter: blur(3px);
-}
-
-.md-effect-16 .md-content {
-	-webkit-transform: translateY(-5%);
-	-moz-transform: translateY(-5%);
-	-ms-transform: translateY(-5%);
-	transform: translateY(-5%);
-	opacity: 0;
-}
-
-.md-show.md-effect-16 ~ .container,
-.md-effect-16 .md-content {
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.md-show.md-effect-16 .md-content {
-	-webkit-transform: translateY(0);
-	-moz-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
-	opacity: 1;
+#no {
+  background-color: rgb(255, 73, 73);
 }
