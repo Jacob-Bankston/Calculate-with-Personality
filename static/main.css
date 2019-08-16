@@ -294,3 +294,27 @@ h4 {
 #no {
   background-color: rgb(255, 73, 73);
 }
+
+
+.md-show.md-effect-16 .md-content {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+#header {
+
+}
+
+.personality-list {
+  width: 500px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+
+.personality {
+  padding-bottom: 50px;
+}

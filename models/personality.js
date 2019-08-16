@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     title: DataTypes.STRING,
     location: DataTypes.STRING,
-    bio: DataTypes.STRING
+    bio: DataTypes.STRING,
+    shorthandname: DataTypes.STRING
   }, {});
   Personality.associate = function(models) {
     // associations can be defined here
