@@ -3,25 +3,40 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee+Inline|Nunito+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <div id="header">
-        <h1 id="personality-selection-heading">Select a Personality!</h1>
+        <h1 class="page-title">Select a Personality!</h1>
         <p id="error-message">{{message}}</p>
     </div>
     <div class="personality-list">
-
         {{#personality}}
-            <div class=personality>
-                <form action="/personality/{{name}}" method="GET">
-                    <input type="submit" class="personality-button" value="Choose Me!">
-                </form>
-                <h3 class="personality-name">Name: {{name}}</h1>
-                <p class="personality-title">Title: {{title}}</p>
-                <p class="personality-location">Location: {{location}}</p>
-                <p class="personality-bio">Bio: {{bio}}</p>
-            </div>
+            <form action="/personality/{{name}}" method="GET">
+                <button class="personality-button {{id}}"type="submit">
+                    <div class="personality-div">
+                        <img src="/images/{{shorthandname}}.png" alt="{{shorthandname}}" />
+                        <div class="personality">
+                            <h3 class="personality-name"><b>Name:</b> {{name}}</h1>
+                            <p class="personality-title"><b>Title:</b> {{title}}</p>
+                            <p class="personality-location"><b>Location:</b> {{location}}</p>
+                            <p class="personality-bio"><b>Bio:</b> {{bio}}</p>
+                        </div>
+                    </div>
+                </button>
+            </form>
         {{/personality}}
     </div>
 </body>

@@ -30,10 +30,10 @@ function reverseNumberFormat(num) {
 // the calc page loads and the character greets the user
 window.addEventListener("load", playCharacterGreeting);
 
-// // MAKING STEVE'S GREETING
+// // MAKING audio'S GREETING
 async function playCharacterGreeting() {
   const audio = document.querySelectorAll(`audio.audio-intro`);
-  let randomAudio = audio[Math.floor(audio.length * Math.random())];
+  let randomAudio = await audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
 const audio = document.querySelectorAll("audio.audio-equals");
@@ -44,7 +44,9 @@ async function playEqualsAudio() {
 }
 
 let feedbackModal = document.querySelector(".feedback-modal");
-feedbackModal.style.display = "none";
+if(feedbackModal){
+  feedbackModal.style.display = "none";
+}
 
 // OPERATOR CALC
 let operator = document.getElementsByClassName("operator");
@@ -128,23 +130,30 @@ for (let i = 0; i < number.length; i++) {
   });
 }
 
+
 let yesFeedback = document.getElementById("yes");
 let noFeedback = document.getElementById("no");
 
 async function playYesResponse() {
-  const audio = document.querySelectorAll(`audio.steve-yes`);
+  const audio = document.querySelectorAll(`audio.audio-yes`);
   let randomAudio = audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
 
 async function playNoResponse() {
-  const audio = document.querySelectorAll(`audio.steve-no`);
+  const audio = document.querySelectorAll(`audio.audio-no`);
   let randomAudio = audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
 
 yesFeedback.addEventListener("click", playYesResponse);
 noFeedback.addEventListener("click", playNoResponse);
+
+window.onclick = function(event) {
+  if (event.target !== feedbackModal) {
+   feedbackModal.style.display = "none";
+  }
+}
 
 // noFeedback.addEventListener('click', playNoResponse) {
 //   //
