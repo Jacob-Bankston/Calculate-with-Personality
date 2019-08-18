@@ -1,7 +1,7 @@
 const express = require("express")
 const mustacheExpress = require("mustache-express")
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 8080
 const path = require("path")
 const models = require("./models")
 
