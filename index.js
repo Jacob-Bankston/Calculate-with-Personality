@@ -15,7 +15,7 @@ app.engine("mustache", mustacheExpress(VIEWS_PATH + "/partials", ".mustache"))
 app.set("views", VIEWS_PATH)
 app.set("view engine", "mustache")
 
-app.get("/personality", (req, res) => {
+app.get("/", (req, res) => {
   models.Personality.findAll()
     .then(personality => {
       // console.log(personality);

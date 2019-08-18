@@ -365,3 +365,18 @@ h4 {
 .personality-name {
   font-size: 1.4em;
 }
+
+@media only screen and (max-width: 600px) {
+  .personality-div {
+    width: auto;
+  }
+  .page-title {
+    font-size: 2.3em;
+  }
+  .feedback-modal {
+    width: auto;
+    height: auto;
+    left: 0;
+    background-color: rgba(73,73,73,.6)
+  }
+}
