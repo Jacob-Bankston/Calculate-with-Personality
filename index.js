@@ -3,6 +3,7 @@ const mustacheExpress = require("mustache-express")
 const path = require("path")
 const models = require("./models")
 const aws = require('aws-sdk')
+aws.config.update({region: 'us-east-2'})
 const app = express()
 const PORT = process.env.PORT || 8080
 
