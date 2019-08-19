@@ -31,7 +31,7 @@ function reverseNumberFormat(num) {
 window.addEventListener("load", playCharacterGreeting);
 
 async function playCharacterGreeting() {
-  const audio = document.querySelectorAll('audio.audio-intro');
+  const audio = document.querySelectorAll("audio.audio-intro");
   let randomAudio = await audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
@@ -134,13 +134,13 @@ let yesFeedback = document.getElementById("yes");
 let noFeedback = document.getElementById("no");
 
 async function playYesResponse() {
-  const audio = document.querySelectorAll(`audio.audio-yes`);
+  const audio = document.querySelectorAll("audio.audio-yes");
   let randomAudio = audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
 
 async function playNoResponse() {
-  const audio = document.querySelectorAll(`audio.audio-no`);
+  const audio = document.querySelectorAll("audio.audio-no");
   let randomAudio = audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
