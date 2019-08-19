@@ -30,9 +30,8 @@ function reverseNumberFormat(num) {
 // the calc page loads and the character greets the user
 window.addEventListener("load", playCharacterGreeting);
 
-// // MAKING audio'S GREETING
 async function playCharacterGreeting() {
-  const audio = document.querySelectorAll(`audio.audio-intro`);
+  const audio = document.querySelectorAll('audio.audio-intro');
   let randomAudio = await audio[Math.floor(audio.length * Math.random())];
   await randomAudio.play();
 }
@@ -155,15 +154,4 @@ window.onclick = function(event) {
   }
 }
 
-// noFeedback.addEventListener('click', playNoResponse) {
-//   //
-// }
-
 function showFeedbackModal() {}
-
-// Ask if character got the answer right, boolean
-/////// yes
-//////////play yes mp3
-/////// no
-//////////play no mp3
-// if output || history not empty clear the module/questions
