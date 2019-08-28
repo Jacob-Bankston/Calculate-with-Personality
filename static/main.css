@@ -193,7 +193,7 @@ button:nth-child(17) {
   word-spacing: 3px;
   /* -webkit-text-stroke: 0.5px white; */
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .page-title::before {
