@@ -352,6 +352,9 @@ h4 {
     left: 0;
     width: 100%;
   }
+  .feedback-modal h2 {
+    margin-bottom: 35px;
+  }
 }
 
 @media (max-width: 56.25em) {
@@ -361,7 +364,7 @@ h4 {
     margin: 0 auto;
   }
   #yes {
-    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
