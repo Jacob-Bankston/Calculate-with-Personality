@@ -328,6 +328,7 @@ h4 {
   border-radius: 7px;
   padding: 30px 50px;
   box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+  display: block;
 }
 
 .feedback-modal h2 {
@@ -344,6 +345,14 @@ h4 {
   box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 20px;
+}
+
+@media (max-width: 56.25em) {
+  .feedback-modal button {
+    margin-left: 0px;
+    margin: 0;
+    margin: 0 auto;
+  }
 }
 
 #yes {
@@ -457,12 +466,12 @@ h4 {
   .page-title {
     font-size: 2.3em;
   }
-  .feedback-modal {
+  /* .feedback-modal {
     width: auto;
     height: auto;
     left: 0;
     background-color: rgba(73, 73, 73, 0.6);
-  }
+  } */
 }
 
 footer {

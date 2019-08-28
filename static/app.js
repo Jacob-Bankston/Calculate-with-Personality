@@ -43,7 +43,7 @@ async function playEqualsAudio() {
 }
 
 let feedbackModal = document.querySelector(".feedback-modal");
-if(feedbackModal){
+if (feedbackModal) {
   feedbackModal.style.display = "none";
 }
 
@@ -129,7 +129,6 @@ for (let i = 0; i < number.length; i++) {
   });
 }
 
-
 let yesFeedback = document.getElementById("yes");
 let noFeedback = document.getElementById("no");
 
@@ -150,8 +149,8 @@ noFeedback.addEventListener("click", playNoResponse);
 
 window.onclick = function(event) {
   if (event.target !== feedbackModal) {
-   feedbackModal.style.display = "none";
+    feedbackModal.style.display = "none";
   }
-}
+};
 
 function showFeedbackModal() {}
