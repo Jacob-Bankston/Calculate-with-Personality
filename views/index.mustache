@@ -15,6 +15,7 @@
     <div id="main-area">
       <header>
         <div class="container">
+        <a href="/" class="back-btn">Back to Personalities</a>
           <div class="avatar">
             <img src="/images/{{shorthandname}}.png" alt="{{shorthandname}}" />
           </div>
@@ -83,6 +84,11 @@
     <audio class="audio-no" src="https://brokencalculator-assets.s3.us-east-2.amazonaws.com/sounds/{{shorthandname}}/4-no/{{shorthandname}}-no-2.wav"></audio>
     <audio class="audio-no" src="https://brokencalculator-assets.s3.us-east-2.amazonaws.com/sounds/{{shorthandname}}/4-no/{{shorthandname}}-no-3.wav"></audio>
     {{/personality}}
+
+
+<footer class="footer">
+    {{> footer}}
+</footer>
     <script src="/app.js"></script>
   </body>
 </html>
