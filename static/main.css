@@ -348,6 +348,13 @@ h4 {
 }
 
 @media (max-width: 56.25em) {
+  .feedback-modal {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 56.25em) {
   .feedback-modal button {
     margin-left: 0px;
     margin: 0;
@@ -466,12 +473,6 @@ h4 {
   .page-title {
     font-size: 2.3em;
   }
-  /* .feedback-modal {
-    width: auto;
-    height: auto;
-    left: 0;
-    background-color: rgba(73, 73, 73, 0.6);
-  } */
 }
 
 footer {
