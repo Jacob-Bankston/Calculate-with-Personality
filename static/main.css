@@ -304,6 +304,12 @@ h4 {
   }
 }
 
+@media (min-width: 112.5em) {
+  .avatar {
+    left: 530px;
+  }
+}
+
 .avatar img {
   width: 100%;
   height: auto;
