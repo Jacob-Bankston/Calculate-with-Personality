@@ -11,25 +11,41 @@
 }
 
 body {
-  /* font-family: "Open Sans", sans-serif; */
-  /* background-color: rgb(26, 26, 26);
-   */
   background: linear-gradient(to bottom right, #43d151, #1492d1);
   color: white;
-  /* background-image: linear-gradient(
-      rgba(62, 20, 20, 0.4),
-      rgba(62, 20, 20, 0.4)
-    ),
-    url(back.jpg); */
-  /* background-color: #fff; */
   background-size: cover;
   background-position: center;
   font-family: Lato;
   font-weight: 300;
   position: relative;
-  height: 100vh;
-  /* color: #555; */
 }
+
+.back-btn {
+  position: absolute;
+  top: -2%;
+  left: 20px;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 3px;
+  color: white;
+  background-color: #3298cb;
+  box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+}
+
+@media (max-width: 56.25em) {
+  .back-btn {
+    top: -3%;
+    left: 1%;
+    font-size: 8px;
+    width: 95px;
+  }
+}
+
 #container {
   margin: 20px auto;
 }
@@ -43,6 +59,21 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
+
+@media (max-width: 56.25em) {
+  #calculator {
+    width: 320px;
+    height: 520px;
+    background-color: #353535;
+    margin: 0 auto;
+    /* margin-bottom: 5px; */
+    top: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+}
+
 #result {
   height: 120px;
   background: linear-gradient(to bottom right, #353535b4, #0c0c0c1a);
@@ -162,6 +193,7 @@ button:nth-child(17) {
   word-spacing: 3px;
   /* -webkit-text-stroke: 0.5px white; */
   position: relative;
+  margin-bottom: 90px;
 }
 
 .page-title::before {
@@ -178,9 +210,23 @@ button:nth-child(17) {
   transform: skewY(370deg) translate(-50%, -50%);
 }
 
+@media (max-width: 56.25em) {
+  .page-title::before {
+    top: 80%;
+  }
+}
+
 h4 {
   text-align: center;
   text-shadow: #353535;
+}
+
+@media (max-width: 56.25em) {
+  h4 {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 130px;
+  }
 }
 
 @-webkit-keyframes float {
@@ -218,7 +264,6 @@ h4 {
   }
 }
 .container {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -245,6 +290,20 @@ h4 {
   left: 350px;
   z-index: 2;
 }
+
+@media (max-width: 56.25em) {
+  .avatar {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 10px;
+    z-index: 100;
+    margin: 0 auto;
+    left: 170%;
+    top: -35%;
+  }
+}
+
 .avatar img {
   width: 100%;
   height: auto;
@@ -295,57 +354,82 @@ h4 {
   background-color: rgb(255, 73, 73);
 }
 
-
 .md-show.md-effect-16 .md-content {
-	-webkit-transform: translateY(0);
-	-moz-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
-	opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .personality-list {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50rem;
+  grid-gap: 10px;
+  margin: 0 auto;
 }
 
-.personality-list form{
+@media (max-width: 56.25em) {
+  .personality-list {
+    grid-template-columns: none;
+    width: 100%;
+  }
+}
+
+.personality-list form {
   display: flex;
 }
 
 .personality-button {
-  background-color: rgba(255,255,255,.2); /* Green */
+  background-color: rgba(255, 255, 255, 0.2); /* Green */
   border: none;
-  border-radius: 36px;
+  border-radius: 3px;
   color: white;
   text-decoration: none;
   display: inline-block;
   padding: 8px 20px;
-  margin: 48px 8px;
+  margin: 10px 8px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
   border: none;
 }
 
+@media (max-width: 56.25em) {
+  .personality-button {
+    width: 100%;
+  }
+}
+
 .personality-button:hover {
-  background-color: rgba(255,255,255,.3);
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .personality-div {
   display: flex;
   align-items: center;
-  width: 420px;
+  width: 400px;
+}
+
+@media (max-width: 56.25em) {
+  .personality-div {
+    display: block;
+    font-size: 16px;
+  }
 }
 
 .personality-div img {
   height: 184px;
   width: auto;
-  border: 2px solid white;
-  border-radius: 36px;
+  border-radius: 50%;
+  border: 5px white solid;
 }
 
 .personality {
@@ -377,6 +461,29 @@ h4 {
     width: auto;
     height: auto;
     left: 0;
-    background-color: rgba(73,73,73,.6)
+    background-color: rgba(73, 73, 73, 0.6);
   }
+}
+
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 50px 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  line-height: 40px;
+}
+
+a::before,
+a::after,
+a::selection,
+a:visited,
+a:active {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
 }

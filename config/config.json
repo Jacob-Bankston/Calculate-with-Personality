@@ -5,7 +5,7 @@
     "database": "brokencalculator",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false 
+    "operatorsAliases": false
   },
   "test": {
     "username": "root",
@@ -21,6 +21,9 @@
     "database": "d7mrfav8i7v07t",
     "host": "ec2-23-21-91-183.compute-1.amazonaws.com",
     "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true
+    },
     "operatorsAliases": false
   }
 }
