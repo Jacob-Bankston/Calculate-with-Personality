@@ -315,6 +315,23 @@ h4 {
   height: auto;
 }
 
+.sound-icon {
+  height: 100px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 5px;
+  left: 1250px;
+  z-index: 2;
+}
+
+@media (max-width: 56.25em) {
+  .sound-icon {
+    left: 250px;
+    top: 80px;
+    height: 50px;
+  }
+}
+
 .content {
   width: 100%;
   max-width: 600px;
