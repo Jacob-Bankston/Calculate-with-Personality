@@ -4,7 +4,7 @@
   "description": "A Calculator with Personalities",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "Jacob Bankston, Taliaa Tauatolo",
   "license": "ISC",
