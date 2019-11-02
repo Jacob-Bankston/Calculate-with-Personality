@@ -13,6 +13,6 @@
     "express": "^4.17.1",
     "mustache-express": "^1.2.8",
     "pg": "^7.12.1",
-    "sequelize": "^5.15.0"
+    "sequelize": "^5.15.1"
   }
 }
