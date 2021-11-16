@@ -9,7 +9,7 @@
   "author": "Jacob Bankston, Taliaa Tauatolo",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.512.0",
+    "aws-sdk": "^2.814.0",
     "express": "^4.17.1",
     "mustache-express": "^1.2.8",
     "pg": "^7.12.1",
